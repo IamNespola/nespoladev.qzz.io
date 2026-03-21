@@ -1,6 +1,6 @@
 import { Download, MessageCircle, Shield, Zap, Eye, EyeOff, Swords, Settings, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import gameplayImg from "@/assets/gameplay.jpg";
 
 const DOWNLOAD_URL = "https://github.com/IamNespola/OpenMyau-Plus/releases";
