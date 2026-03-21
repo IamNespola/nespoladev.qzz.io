@@ -28,12 +28,12 @@ const faqs = [
   { q: "What Minecraft versions are supported?", a: "Currently optimized for 1.8.9 via Forge. 1.19+ support is in beta." },
 ];
 
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { delay: i * 0.1, duration: 0.5, ease: "easeOut" },
+    transition: { delay: i * 0.1, duration: 0.5, ease: [0.25, 0.1, 0.25, 1] },
   }),
 };
 
