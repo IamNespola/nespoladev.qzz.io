@@ -158,7 +158,63 @@ const Index = () => {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Pricing */}
+      <section id="pricing" className="max-w-4xl mx-auto px-6 py-16">
+        <motion.div className="text-center mb-12 space-y-3" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+          <span className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-1 text-xs font-mono font-semibold text-primary">
+            💰 cat /etc/pricing.conf
+          </span>
+          <h2 className="font-mono font-extrabold text-foreground text-3xl md:text-4xl">
+            <span className="text-primary">$</span> Choose your plan
+          </h2>
+          <p className="text-muted-foreground font-mono text-sm">Free forever. Or go pro for the real ones.</p>
+        </motion.div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Free */}
+          <motion.div className="rounded-lg border border-border bg-card p-8 space-y-6" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={0}>
+            <div className="space-y-2">
+              <p className="font-mono text-xs text-muted-foreground">// free tier</p>
+              <h3 className="font-mono font-extrabold text-foreground text-2xl">Free</h3>
+              <p className="font-mono font-extrabold text-primary text-4xl">$0<span className="text-muted-foreground text-base font-normal">/forever</span></p>
+            </div>
+            <ul className="space-y-3 font-mono text-sm text-muted-foreground">
+              <li className="flex items-center gap-2"><span className="text-primary">✓</span> 48 modules included</li>
+              <li className="flex items-center gap-2"><span className="text-primary">✓</span> Anti-cheat bypass</li>
+              <li className="flex items-center gap-2"><span className="text-primary">✓</span> Custom HUD editor</li>
+              <li className="flex items-center gap-2"><span className="text-primary">✓</span> Community support</li>
+              <li className="flex items-center gap-2"><span className="text-primary">✓</span> Regular updates</li>
+            </ul>
+            <Button className="w-full rounded-md gap-2 font-mono" asChild>
+              <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
+                <Download className="w-4 h-4" />
+                sudo ./install.sh
+              </a>
+            </Button>
+          </motion.div>
+
+          {/* Pro */}
+          <motion.div className="rounded-lg border border-primary/50 bg-card p-8 space-y-6 relative shadow-[0_0_30px_hsl(120_60%_50%/0.1)]" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={1}>
+            <span className="absolute -top-3 right-6 bg-primary text-primary-foreground font-mono text-xs font-bold px-3 py-1 rounded-md">RECOMMENDED</span>
+            <div className="space-y-2">
+              <p className="font-mono text-xs text-muted-foreground">// pro tier</p>
+              <h3 className="font-mono font-extrabold text-foreground text-2xl">Pro</h3>
+              <p className="font-mono font-extrabold text-primary text-4xl">?<span className="text-muted-foreground text-base font-normal">/coming soon</span></p>
+            </div>
+            <ul className="space-y-3 font-mono text-sm text-muted-foreground">
+              <li className="flex items-center gap-2"><span className="text-primary">✓</span> Everything in Free</li>
+              <li className="flex items-center gap-2"><span className="text-primary">✓</span> Priority bypass updates</li>
+              <li className="flex items-center gap-2"><span className="text-primary">✓</span> Exclusive modules</li>
+              <li className="flex items-center gap-2"><span className="text-primary">✓</span> Config sharing & presets</li>
+              <li className="flex items-center gap-2"><span className="text-primary">✓</span> Direct dev support</li>
+            </ul>
+            <Button variant="outline" className="w-full rounded-md gap-2 font-mono border-primary/40 text-primary hover:bg-primary/10" disabled>
+              <span className="animate-pulse">Coming Soon...</span>
+            </Button>
+          </motion.div>
+        </div>
+      </section>
+
+
       <section id="faq" className="max-w-3xl mx-auto px-6 py-16">
         <motion.div className="text-center mb-12 space-y-3" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <h2 className="font-mono font-extrabold text-foreground text-3xl md:text-4xl"><span className="text-primary">$</span> man openmyau</h2>
