@@ -89,7 +89,7 @@ const Index = () => {
             </div>
           </motion.div>
           <motion.div className="flex-shrink-0 w-full lg:w-[340px] mt-4 lg:mt-16" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }}>
-            <div className="rounded-2xl overflow-hidden border-4 border-background shadow-xl">
+            <div className="rounded-lg overflow-hidden border border-border shadow-[0_0_30px_hsl(120_60%_50%/0.1)]">
               <img src={gameplayImg} alt="Gameplay preview" className="w-full h-auto" />
             </div>
           </motion.div>
