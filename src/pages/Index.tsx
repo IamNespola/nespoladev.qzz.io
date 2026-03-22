@@ -39,18 +39,23 @@ const fadeUp: Variants = {
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background" style={{ backgroundImage: 'var(--gradient-top)', backgroundSize: '100% 600px', backgroundRepeat: 'no-repeat' }}>
+    <div className="min-h-screen bg-background font-mono" style={{ backgroundImage: 'var(--gradient-top)', backgroundSize: '100% 600px', backgroundRepeat: 'no-repeat' }}>
+      {/* Scanline overlay */}
+      <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, hsl(120 60% 50% / 0.1) 2px, hsl(120 60% 50% / 0.1) 4px)' }} />
+      
       {/* Nav */}
       <nav className="px-6 py-5 flex items-center justify-between max-w-5xl mx-auto">
-        <span className="font-mono font-bold text-foreground text-lg">// <span className="font-extrabold">OpenMyau+</span></span>
+        <span className="font-mono font-bold text-primary text-lg tracking-wider">
+          <span className="text-muted-foreground">user@arch</span><span className="text-foreground">:</span><span className="text-primary">~</span><span className="text-foreground">$</span> <span className="font-extrabold text-foreground">OpenMyau+</span>
+        </span>
         <div className="hidden md:flex items-center gap-6 font-mono text-sm text-muted-foreground">
-          <a href="#features" className="hover:text-foreground transition-colors">Features</a>
-          <a href="#stats" className="hover:text-foreground transition-colors">Stats</a>
-          <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
-          <Button size="sm" className="rounded-full gap-2 ml-2" asChild>
+          <a href="#features" className="hover:text-primary transition-colors">[features]</a>
+          <a href="#stats" className="hover:text-primary transition-colors">[stats]</a>
+          <a href="#faq" className="hover:text-primary transition-colors">[faq]</a>
+          <Button size="sm" className="rounded-full gap-2 ml-2 font-mono" asChild>
             <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
               <Download className="w-3.5 h-3.5" />
-              Download
+              ./install.sh
             </a>
           </Button>
         </div>
@@ -60,47 +65,51 @@ const Index = () => {
       <section className="max-w-5xl mx-auto px-6 pt-28 pb-20">
         <div className="flex flex-col lg:flex-row gap-10 items-start">
           <motion.div className="flex-1 space-y-6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-mono font-semibold text-primary">
+            <span className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-1 text-xs font-mono font-semibold text-primary">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Forge 1.8.9
+              v4.2.0 :: forge-1.8.9
             </span>
             <h1 className="font-mono font-extrabold text-foreground text-5xl md:text-6xl leading-tight tracking-tight">
-              Dominate.<br />Unfairly.
+              <span className="text-primary">$</span> Dominate.<br /><span className="text-muted-foreground"># </span>Unfairly.
             </h1>
-            <p className="text-muted-foreground max-w-md text-base leading-relaxed">
-              Stop playing fair. OpenMyau+ is the optimized, undetectable client built for players who want to win – no excuses, no mercy.
+            <p className="text-muted-foreground max-w-md text-sm leading-relaxed font-mono">
+              &gt; Stop playing fair. OpenMyau+ is the optimized, undetectable client built for players who want to win – no excuses, no mercy.
             </p>
             <div className="flex gap-3 pt-2">
-              <Button className="rounded-full gap-2 px-6" asChild>
+              <Button className="rounded-md gap-2 px-6 font-mono" asChild>
                 <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
                   <Download className="w-4 h-4" />
-                  Download (free)
+                  sudo ./install.sh
                 </a>
               </Button>
-              <Button variant="outline" className="rounded-full gap-2 px-6 border-foreground/20 text-foreground hover:bg-foreground/5">
+              <Button variant="outline" className="rounded-md gap-2 px-6 border-border text-foreground hover:bg-primary/10 hover:text-primary hover:border-primary/40 font-mono">
                 <MessageCircle className="w-4 h-4" />
-                Join Discord
+                /join #discord
               </Button>
             </div>
           </motion.div>
           <motion.div className="flex-shrink-0 w-full lg:w-[340px] mt-4 lg:mt-16" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }}>
-            <div className="rounded-2xl overflow-hidden border-4 border-background shadow-xl">
+            <div className="rounded-lg overflow-hidden border border-border shadow-[0_0_30px_hsl(120_60%_50%/0.1)]">
               <img src={gameplayImg} alt="Gameplay preview" className="w-full h-auto" />
             </div>
           </motion.div>
         </div>
 
         {/* Terminal */}
-        <motion.div className="mt-10 max-w-md rounded-xl border border-border bg-card p-5 font-mono text-sm space-y-1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }}>
-          <div className="flex gap-1.5 mb-3">
-            <span className="w-3 h-3 rounded-full bg-destructive" />
-            <span className="w-3 h-3 rounded-full" style={{ background: 'hsl(40 90% 60%)' }} />
-            <span className="w-3 h-3 rounded-full" style={{ background: 'hsl(140 60% 50%)' }} />
+        <motion.div className="mt-10 max-w-lg rounded-lg border border-border bg-card p-5 font-mono text-sm space-y-1 shadow-[0_0_20px_hsl(120_60%_50%/0.05)]" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }}>
+          <div className="flex items-center gap-2 mb-3 text-muted-foreground text-xs border-b border-border pb-2">
+            <span className="w-3 h-3 rounded-full bg-destructive/80" />
+            <span className="w-3 h-3 rounded-full" style={{ background: 'hsl(40 80% 50%)' }} />
+            <span className="w-3 h-3 rounded-full" style={{ background: 'hsl(120 60% 45%)' }} />
+            <span className="ml-2">bash — 80×24</span>
           </div>
-          <p className="text-muted-foreground"># easy install on all devices</p>
-          <p className="text-foreground">$ <span className="text-primary font-bold">install</span> the mod</p>
-          <p className="text-foreground">$ <span className="text-primary font-bold">launch</span> minecraft</p>
-          <p className="text-muted-foreground">&gt; injected successfully.</p>
+          <p className="text-muted-foreground"># pacman -S openmyau-plus</p>
+          <p className="text-foreground"><span className="text-primary">[root@arch ~]$</span> git clone https://github.com/...</p>
+          <p className="text-foreground"><span className="text-primary">[root@arch ~]$</span> cd OpenMyau-Plus && ./build.sh</p>
+          <p className="text-muted-foreground">[<span className="text-primary">✓</span>] compiled 200+ modules</p>
+          <p className="text-muted-foreground">[<span className="text-primary">✓</span>] bypass engine loaded</p>
+          <p className="text-foreground"><span className="text-primary">[root@arch ~]$</span> java -jar openmyau.jar</p>
+          <p className="text-primary animate-pulse">▋</p>
         </motion.div>
       </section>
 
@@ -119,24 +128,24 @@ const Index = () => {
       {/* Features */}
       <section id="features" className="max-w-5xl mx-auto px-6 py-16">
         <motion.div className="text-center mb-12 space-y-3" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-          <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-mono font-semibold text-primary">
-            <Zap className="w-3 h-3" /> Modules
+          <span className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-1 text-xs font-mono font-semibold text-primary">
+            <Zap className="w-3 h-3" /> cat /etc/modules.conf
           </span>
           <h2 className="font-mono font-extrabold text-foreground text-3xl md:text-4xl">
-            Everything you need to win
+            <span className="text-primary">$</span> Everything you need to win
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">
+          <p className="text-muted-foreground max-w-lg mx-auto font-mono text-sm">
             200+ modules, all configurable, all undetectable. Here are the highlights.
           </p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((f, i) => (
-            <motion.div key={f.title} className="group rounded-2xl border border-border bg-card p-6 space-y-3 hover:border-primary/40 transition-colors" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} custom={i} whileHover={{ y: -4, transition: { duration: 0.2 } }}>
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+            <motion.div key={f.title} className="group rounded-lg border border-border bg-card p-6 space-y-3 hover:border-primary/40 hover:shadow-[0_0_15px_hsl(120_60%_50%/0.08)] transition-all" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} custom={i} whileHover={{ y: -4, transition: { duration: 0.2 } }}>
+              <div className="w-10 h-10 rounded-md border border-border bg-primary/10 flex items-center justify-center text-primary">
                 <f.icon className="w-5 h-5" />
               </div>
-              <h3 className="font-mono font-bold text-foreground text-lg">{f.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
+              <h3 className="font-mono font-bold text-primary text-lg">{f.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed font-mono">{f.desc}</p>
             </motion.div>
           ))}
         </div>
@@ -145,18 +154,18 @@ const Index = () => {
       {/* FAQ */}
       <section id="faq" className="max-w-3xl mx-auto px-6 py-16">
         <motion.div className="text-center mb-12 space-y-3" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-          <h2 className="font-mono font-extrabold text-foreground text-3xl md:text-4xl">FAQ</h2>
-          <p className="text-muted-foreground">Got questions? We've got answers.</p>
+          <h2 className="font-mono font-extrabold text-foreground text-3xl md:text-4xl"><span className="text-primary">$</span> man openmyau</h2>
+          <p className="text-muted-foreground font-mono text-sm">Got questions? RTFM — or just read below.</p>
         </motion.div>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
-            <motion.details key={faq.q} className="group rounded-xl border border-border bg-card overflow-hidden" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-30px" }} custom={i}>
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-mono font-semibold text-foreground text-sm hover:bg-primary/5 transition-colors">
-                {faq.q}
+             <motion.details key={faq.q} className="group rounded-lg border border-border bg-card overflow-hidden" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-30px" }} custom={i}>
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-mono font-semibold text-foreground text-sm hover:bg-primary/5 hover:text-primary transition-colors">
+                <span><span className="text-primary mr-2">?</span>{faq.q}</span>
                 <ChevronRight className="w-4 h-4 text-muted-foreground group-open:rotate-90 transition-transform" />
               </summary>
-              <div className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed">
-                {faq.a}
+              <div className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed font-mono border-t border-border pt-4">
+                <span className="text-primary">&gt;</span> {faq.a}
               </div>
             </motion.details>
           ))}
@@ -165,23 +174,23 @@ const Index = () => {
 
       {/* CTA */}
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <motion.div className="rounded-3xl bg-primary/10 border border-primary/20 p-10 md:p-16 text-center space-y-6" initial={{ opacity: 0, scale: 0.96 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+        <motion.div className="rounded-lg bg-card border border-primary/30 p-10 md:p-16 text-center space-y-6 shadow-[0_0_40px_hsl(120_60%_50%/0.08)]" initial={{ opacity: 0, scale: 0.96 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <h2 className="font-mono font-extrabold text-foreground text-3xl md:text-4xl">
-            Ready to dominate?
+            <span className="text-primary">$</span> Ready to dominate<span className="text-primary animate-pulse">?</span>
           </h2>
-          <p className="text-muted-foreground max-w-md mx-auto">
-            Join 50,000+ players already using OpenMyau+. Free forever.
+          <p className="text-muted-foreground max-w-md mx-auto font-mono text-sm">
+            Join 50,000+ players already using OpenMyau+. Free as in freedom.
           </p>
           <div className="flex gap-3 justify-center">
-            <Button className="rounded-full gap-2 px-8 text-base h-12" asChild>
+            <Button className="rounded-md gap-2 px-8 text-base h-12 font-mono" asChild>
               <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
                 <Download className="w-5 h-5" />
-                Download Now
+                sudo ./install.sh
               </a>
             </Button>
-            <Button variant="outline" className="rounded-full gap-2 px-8 text-base h-12 border-foreground/20 text-foreground hover:bg-foreground/5">
+            <Button variant="outline" className="rounded-md gap-2 px-8 text-base h-12 border-border text-foreground hover:bg-primary/10 hover:text-primary hover:border-primary/40 font-mono">
               <MessageCircle className="w-5 h-5" />
-              Discord
+              /join
             </Button>
           </div>
         </motion.div>
@@ -189,11 +198,11 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="max-w-5xl mx-auto px-6 py-10 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-        <span className="font-mono text-sm text-muted-foreground">© 2026 OpenMyau+. Not affiliated with Mojang.</span>
-        <div className="flex gap-5 font-mono text-sm text-muted-foreground">
-          <a href="#" className="hover:text-foreground transition-colors">Discord</a>
-          <a href="#" className="hover:text-foreground transition-colors">GitHub</a>
-          <a href="#" className="hover:text-foreground transition-colors">Terms</a>
+        <span className="font-mono text-xs text-muted-foreground">© 2026 OpenMyau+ — licensed under GPLv3. Not affiliated with Mojang.</span>
+        <div className="flex gap-5 font-mono text-xs text-muted-foreground">
+          <a href="#" className="hover:text-primary transition-colors">[discord]</a>
+          <a href="#" className="hover:text-primary transition-colors">[github]</a>
+          <a href="#" className="hover:text-primary transition-colors">[terms]</a>
         </div>
       </footer>
     </div>
