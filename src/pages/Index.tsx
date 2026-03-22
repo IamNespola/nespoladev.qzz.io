@@ -67,7 +67,7 @@ const Index = () => {
           <motion.div className="flex-1 space-y-6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <span className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-1 text-xs font-mono font-semibold text-primary">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              v4.2.0 :: forge-1.8.9
+              v1.6+2 :: forge-1.8.9
             </span>
             <h1 className="font-mono font-extrabold text-foreground text-5xl md:text-6xl leading-tight tracking-tight">
               <span className="text-primary">$</span> Dominate.<br /><span className="text-muted-foreground"># </span>Unfairly.
