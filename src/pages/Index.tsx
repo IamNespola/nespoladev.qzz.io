@@ -96,16 +96,20 @@ const Index = () => {
         </div>
 
         {/* Terminal */}
-        <motion.div className="mt-10 max-w-md rounded-xl border border-border bg-card p-5 font-mono text-sm space-y-1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }}>
-          <div className="flex gap-1.5 mb-3">
-            <span className="w-3 h-3 rounded-full bg-destructive" />
-            <span className="w-3 h-3 rounded-full" style={{ background: 'hsl(40 90% 60%)' }} />
-            <span className="w-3 h-3 rounded-full" style={{ background: 'hsl(140 60% 50%)' }} />
+        <motion.div className="mt-10 max-w-lg rounded-lg border border-border bg-card p-5 font-mono text-sm space-y-1 shadow-[0_0_20px_hsl(120_60%_50%/0.05)]" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.4 }}>
+          <div className="flex items-center gap-2 mb-3 text-muted-foreground text-xs border-b border-border pb-2">
+            <span className="w-3 h-3 rounded-full bg-destructive/80" />
+            <span className="w-3 h-3 rounded-full" style={{ background: 'hsl(40 80% 50%)' }} />
+            <span className="w-3 h-3 rounded-full" style={{ background: 'hsl(120 60% 45%)' }} />
+            <span className="ml-2">bash — 80×24</span>
           </div>
-          <p className="text-muted-foreground"># easy install on all devices</p>
-          <p className="text-foreground">$ <span className="text-primary font-bold">install</span> the mod</p>
-          <p className="text-foreground">$ <span className="text-primary font-bold">launch</span> minecraft</p>
-          <p className="text-muted-foreground">&gt; injected successfully.</p>
+          <p className="text-muted-foreground"># pacman -S openmyau-plus</p>
+          <p className="text-foreground"><span className="text-primary">[root@arch ~]$</span> git clone https://github.com/...</p>
+          <p className="text-foreground"><span className="text-primary">[root@arch ~]$</span> cd OpenMyau-Plus && ./build.sh</p>
+          <p className="text-muted-foreground">[<span className="text-primary">✓</span>] compiled 200+ modules</p>
+          <p className="text-muted-foreground">[<span className="text-primary">✓</span>] bypass engine loaded</p>
+          <p className="text-foreground"><span className="text-primary">[root@arch ~]$</span> java -jar openmyau.jar</p>
+          <p className="text-primary animate-pulse">▋</p>
         </motion.div>
       </section>
 
