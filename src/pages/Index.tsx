@@ -186,7 +186,7 @@ const Index = () => {
             <span className="text-primary">$</span> Ready to dominate<span className="text-primary animate-pulse">?</span>
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto font-mono text-sm">
-            Join 50,000+ players already using OpenMyau+. Free as in freedom.
+            Join 1,500+ players already using OpenMyau+. Free as in freedom.
           </p>
           <div className="flex gap-3 justify-center">
             <Button className="rounded-md gap-2 px-8 text-base h-12 font-mono" asChild>
