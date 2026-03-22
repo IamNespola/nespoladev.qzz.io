@@ -87,9 +87,17 @@ const Index = () => {
               </Button>
             </div>
           </motion.div>
-          <motion.div className="flex-shrink-0 w-full lg:w-[340px] mt-4 lg:mt-16" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }}>
+          <motion.div className="flex-shrink-0 w-full lg:w-[400px] mt-4 lg:mt-16" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.2 }}>
             <div className="rounded-lg overflow-hidden border border-border shadow-[0_0_30px_hsl(120_60%_50%/0.1)]">
-              <img src={gameplayImg} alt="Gameplay preview" className="w-full h-auto" />
+              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src="https://www.youtube.com/embed/8Hf1e1YLqFg?si=Tmowl5jj0PejjtoL"
+                  title="OpenMyau+ Showcase"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              </div>
             </div>
           </motion.div>
         </div>
