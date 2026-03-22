@@ -198,11 +198,11 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="max-w-5xl mx-auto px-6 py-10 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
-        <span className="font-mono text-sm text-muted-foreground">© 2026 OpenMyau+. Not affiliated with Mojang.</span>
-        <div className="flex gap-5 font-mono text-sm text-muted-foreground">
-          <a href="#" className="hover:text-foreground transition-colors">Discord</a>
-          <a href="#" className="hover:text-foreground transition-colors">GitHub</a>
-          <a href="#" className="hover:text-foreground transition-colors">Terms</a>
+        <span className="font-mono text-xs text-muted-foreground">© 2026 OpenMyau+ — licensed under GPLv3. Not affiliated with Mojang.</span>
+        <div className="flex gap-5 font-mono text-xs text-muted-foreground">
+          <a href="#" className="hover:text-primary transition-colors">[discord]</a>
+          <a href="#" className="hover:text-primary transition-colors">[github]</a>
+          <a href="#" className="hover:text-primary transition-colors">[terms]</a>
         </div>
       </footer>
     </div>
