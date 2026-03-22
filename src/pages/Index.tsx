@@ -174,23 +174,23 @@ const Index = () => {
 
       {/* CTA */}
       <section className="max-w-5xl mx-auto px-6 py-20">
-        <motion.div className="rounded-3xl bg-primary/10 border border-primary/20 p-10 md:p-16 text-center space-y-6" initial={{ opacity: 0, scale: 0.96 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+        <motion.div className="rounded-lg bg-card border border-primary/30 p-10 md:p-16 text-center space-y-6 shadow-[0_0_40px_hsl(120_60%_50%/0.08)]" initial={{ opacity: 0, scale: 0.96 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <h2 className="font-mono font-extrabold text-foreground text-3xl md:text-4xl">
-            Ready to dominate?
+            <span className="text-primary">$</span> Ready to dominate<span className="text-primary animate-pulse">?</span>
           </h2>
-          <p className="text-muted-foreground max-w-md mx-auto">
-            Join 50,000+ players already using OpenMyau+. Free forever.
+          <p className="text-muted-foreground max-w-md mx-auto font-mono text-sm">
+            Join 50,000+ players already using OpenMyau+. Free as in freedom.
           </p>
           <div className="flex gap-3 justify-center">
-            <Button className="rounded-full gap-2 px-8 text-base h-12" asChild>
+            <Button className="rounded-md gap-2 px-8 text-base h-12 font-mono" asChild>
               <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
                 <Download className="w-5 h-5" />
-                Download Now
+                sudo ./install.sh
               </a>
             </Button>
-            <Button variant="outline" className="rounded-full gap-2 px-8 text-base h-12 border-foreground/20 text-foreground hover:bg-foreground/5">
+            <Button variant="outline" className="rounded-md gap-2 px-8 text-base h-12 border-border text-foreground hover:bg-primary/10 hover:text-primary hover:border-primary/40 font-mono">
               <MessageCircle className="w-5 h-5" />
-              Discord
+              /join
             </Button>
           </div>
         </motion.div>
