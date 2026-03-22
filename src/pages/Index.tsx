@@ -50,6 +50,7 @@ const Index = () => {
         <div className="hidden md:flex items-center gap-6 font-mono text-sm text-muted-foreground">
           <a href="#features" className="hover:text-primary transition-colors">[features]</a>
           <a href="#stats" className="hover:text-primary transition-colors">[stats]</a>
+          <a href="#pricing" className="hover:text-primary transition-colors">[pricing]</a>
           <a href="#faq" className="hover:text-primary transition-colors">[faq]</a>
           <Button size="sm" className="rounded-full gap-2 ml-2 font-mono" asChild>
             <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
