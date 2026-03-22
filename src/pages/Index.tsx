@@ -14,10 +14,10 @@ const features = [
 ];
 
 const stats = [
-  { value: "50K+", label: "Downloads" },
+  { value: "1.5K+", label: "Downloads" },
   { value: "99.8%", label: "Bypass Rate" },
   { value: "0.3ms", label: "Avg Latency" },
-  { value: "200+", label: "Modules" },
+  { value: "48", label: "Modules" },
 ];
 
 const faqs = [
@@ -113,7 +113,7 @@ const Index = () => {
           <p className="text-muted-foreground"># pacman -S openmyau-plus</p>
           <p className="text-foreground"><span className="text-primary">[root@arch ~]$</span> git clone https://github.com/...</p>
           <p className="text-foreground"><span className="text-primary">[root@arch ~]$</span> cd OpenMyau-Plus && ./build.sh</p>
-          <p className="text-muted-foreground">[<span className="text-primary">✓</span>] compiled 200+ modules</p>
+          <p className="text-muted-foreground">[<span className="text-primary">✓</span>] compiled 48 modules</p>
           <p className="text-muted-foreground">[<span className="text-primary">✓</span>] bypass engine loaded</p>
           <p className="text-foreground"><span className="text-primary">[root@arch ~]$</span> java -jar openmyau.jar</p>
           <p className="text-primary animate-pulse">▋</p>
@@ -142,7 +142,7 @@ const Index = () => {
             <span className="text-primary">$</span> Everything you need to win
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto font-mono text-sm">
-            200+ modules, all configurable, all undetectable. Here are the highlights.
+            48 modules, all configurable, all undetectable. Here are the highlights.
           </p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -186,7 +186,7 @@ const Index = () => {
             <span className="text-primary">$</span> Ready to dominate<span className="text-primary animate-pulse">?</span>
           </h2>
           <p className="text-muted-foreground max-w-md mx-auto font-mono text-sm">
-            Join 50,000+ players already using OpenMyau+. Free as in freedom.
+            Join 1,500+ players already using OpenMyau+. Free as in freedom.
           </p>
           <div className="flex gap-3 justify-center">
             <Button className="rounded-md gap-2 px-8 text-base h-12 font-mono" asChild>
