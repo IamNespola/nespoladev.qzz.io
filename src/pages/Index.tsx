@@ -142,7 +142,7 @@ const Index = () => {
             <span className="text-primary">$</span> Everything you need to win
           </h2>
           <p className="text-muted-foreground max-w-lg mx-auto font-mono text-sm">
-            200+ modules, all configurable, all undetectable. Here are the highlights.
+            48 modules, all configurable, all undetectable. Here are the highlights.
           </p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
