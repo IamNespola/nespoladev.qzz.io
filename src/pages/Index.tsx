@@ -128,13 +128,13 @@ const Index = () => {
       {/* Features */}
       <section id="features" className="max-w-5xl mx-auto px-6 py-16">
         <motion.div className="text-center mb-12 space-y-3" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-          <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-mono font-semibold text-primary">
-            <Zap className="w-3 h-3" /> Modules
+          <span className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-1 text-xs font-mono font-semibold text-primary">
+            <Zap className="w-3 h-3" /> cat /etc/modules.conf
           </span>
           <h2 className="font-mono font-extrabold text-foreground text-3xl md:text-4xl">
-            Everything you need to win
+            <span className="text-primary">$</span> Everything you need to win
           </h2>
-          <p className="text-muted-foreground max-w-lg mx-auto">
+          <p className="text-muted-foreground max-w-lg mx-auto font-mono text-sm">
             200+ modules, all configurable, all undetectable. Here are the highlights.
           </p>
         </motion.div>
