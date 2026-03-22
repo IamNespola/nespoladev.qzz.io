@@ -65,26 +65,26 @@ const Index = () => {
       <section className="max-w-5xl mx-auto px-6 pt-28 pb-20">
         <div className="flex flex-col lg:flex-row gap-10 items-start">
           <motion.div className="flex-1 space-y-6" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-mono font-semibold text-primary">
+            <span className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-1 text-xs font-mono font-semibold text-primary">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              Forge 1.8.9
+              v4.2.0 :: forge-1.8.9
             </span>
             <h1 className="font-mono font-extrabold text-foreground text-5xl md:text-6xl leading-tight tracking-tight">
-              Dominate.<br />Unfairly.
+              <span className="text-primary">$</span> Dominate.<br /><span className="text-muted-foreground"># </span>Unfairly.
             </h1>
-            <p className="text-muted-foreground max-w-md text-base leading-relaxed">
-              Stop playing fair. OpenMyau+ is the optimized, undetectable client built for players who want to win – no excuses, no mercy.
+            <p className="text-muted-foreground max-w-md text-sm leading-relaxed font-mono">
+              &gt; Stop playing fair. OpenMyau+ is the optimized, undetectable client built for players who want to win – no excuses, no mercy.
             </p>
             <div className="flex gap-3 pt-2">
-              <Button className="rounded-full gap-2 px-6" asChild>
+              <Button className="rounded-md gap-2 px-6 font-mono" asChild>
                 <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
                   <Download className="w-4 h-4" />
-                  Download (free)
+                  sudo ./install.sh
                 </a>
               </Button>
-              <Button variant="outline" className="rounded-full gap-2 px-6 border-foreground/20 text-foreground hover:bg-foreground/5">
+              <Button variant="outline" className="rounded-md gap-2 px-6 border-border text-foreground hover:bg-primary/10 hover:text-primary hover:border-primary/40 font-mono">
                 <MessageCircle className="w-4 h-4" />
-                Join Discord
+                /join #discord
               </Button>
             </div>
           </motion.div>
