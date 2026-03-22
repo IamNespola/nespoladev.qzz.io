@@ -39,18 +39,23 @@ const fadeUp: Variants = {
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background" style={{ backgroundImage: 'var(--gradient-top)', backgroundSize: '100% 600px', backgroundRepeat: 'no-repeat' }}>
+    <div className="min-h-screen bg-background font-mono" style={{ backgroundImage: 'var(--gradient-top)', backgroundSize: '100% 600px', backgroundRepeat: 'no-repeat' }}>
+      {/* Scanline overlay */}
+      <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.03]" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, hsl(120 60% 50% / 0.1) 2px, hsl(120 60% 50% / 0.1) 4px)' }} />
+      
       {/* Nav */}
       <nav className="px-6 py-5 flex items-center justify-between max-w-5xl mx-auto">
-        <span className="font-mono font-bold text-foreground text-lg">// <span className="font-extrabold">OpenMyau+</span></span>
+        <span className="font-mono font-bold text-primary text-lg tracking-wider">
+          <span className="text-muted-foreground">user@arch</span><span className="text-foreground">:</span><span className="text-primary">~</span><span className="text-foreground">$</span> <span className="font-extrabold text-foreground">OpenMyau+</span>
+        </span>
         <div className="hidden md:flex items-center gap-6 font-mono text-sm text-muted-foreground">
-          <a href="#features" className="hover:text-foreground transition-colors">Features</a>
-          <a href="#stats" className="hover:text-foreground transition-colors">Stats</a>
-          <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
-          <Button size="sm" className="rounded-full gap-2 ml-2" asChild>
+          <a href="#features" className="hover:text-primary transition-colors">[features]</a>
+          <a href="#stats" className="hover:text-primary transition-colors">[stats]</a>
+          <a href="#faq" className="hover:text-primary transition-colors">[faq]</a>
+          <Button size="sm" className="rounded-full gap-2 ml-2 font-mono" asChild>
             <a href={DOWNLOAD_URL} target="_blank" rel="noopener noreferrer">
               <Download className="w-3.5 h-3.5" />
-              Download
+              ./install.sh
             </a>
           </Button>
         </div>
