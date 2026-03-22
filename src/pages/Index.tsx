@@ -14,10 +14,10 @@ const features = [
 ];
 
 const stats = [
-  { value: "50K+", label: "Downloads" },
+  { value: "1.5K+", label: "Downloads" },
   { value: "99.8%", label: "Bypass Rate" },
   { value: "0.3ms", label: "Avg Latency" },
-  { value: "200+", label: "Modules" },
+  { value: "48", label: "Modules" },
 ];
 
 const faqs = [
