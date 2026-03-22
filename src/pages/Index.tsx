@@ -140,12 +140,12 @@ const Index = () => {
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((f, i) => (
-            <motion.div key={f.title} className="group rounded-2xl border border-border bg-card p-6 space-y-3 hover:border-primary/40 transition-colors" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} custom={i} whileHover={{ y: -4, transition: { duration: 0.2 } }}>
-              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+            <motion.div key={f.title} className="group rounded-lg border border-border bg-card p-6 space-y-3 hover:border-primary/40 hover:shadow-[0_0_15px_hsl(120_60%_50%/0.08)] transition-all" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} custom={i} whileHover={{ y: -4, transition: { duration: 0.2 } }}>
+              <div className="w-10 h-10 rounded-md border border-border bg-primary/10 flex items-center justify-center text-primary">
                 <f.icon className="w-5 h-5" />
               </div>
-              <h3 className="font-mono font-bold text-foreground text-lg">{f.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{f.desc}</p>
+              <h3 className="font-mono font-bold text-primary text-lg">{f.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed font-mono">{f.desc}</p>
             </motion.div>
           ))}
         </div>
