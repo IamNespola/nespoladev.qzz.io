@@ -159,13 +159,13 @@ const Index = () => {
         </motion.div>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
-            <motion.details key={faq.q} className="group rounded-xl border border-border bg-card overflow-hidden" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-30px" }} custom={i}>
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-mono font-semibold text-foreground text-sm hover:bg-primary/5 transition-colors">
-                {faq.q}
+             <motion.details key={faq.q} className="group rounded-lg border border-border bg-card overflow-hidden" variants={fadeUp} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-30px" }} custom={i}>
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-mono font-semibold text-foreground text-sm hover:bg-primary/5 hover:text-primary transition-colors">
+                <span><span className="text-primary mr-2">?</span>{faq.q}</span>
                 <ChevronRight className="w-4 h-4 text-muted-foreground group-open:rotate-90 transition-transform" />
               </summary>
-              <div className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed">
-                {faq.a}
+              <div className="px-5 pb-5 text-muted-foreground text-sm leading-relaxed font-mono border-t border-border pt-4">
+                <span className="text-primary">&gt;</span> {faq.a}
               </div>
             </motion.details>
           ))}
