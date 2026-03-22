@@ -113,7 +113,7 @@ const Index = () => {
           <p className="text-muted-foreground"># pacman -S openmyau-plus</p>
           <p className="text-foreground"><span className="text-primary">[root@arch ~]$</span> git clone https://github.com/...</p>
           <p className="text-foreground"><span className="text-primary">[root@arch ~]$</span> cd OpenMyau-Plus && ./build.sh</p>
-          <p className="text-muted-foreground">[<span className="text-primary">✓</span>] compiled 200+ modules</p>
+          <p className="text-muted-foreground">[<span className="text-primary">✓</span>] compiled 48 modules</p>
           <p className="text-muted-foreground">[<span className="text-primary">✓</span>] bypass engine loaded</p>
           <p className="text-foreground"><span className="text-primary">[root@arch ~]$</span> java -jar openmyau.jar</p>
           <p className="text-primary animate-pulse">▋</p>
