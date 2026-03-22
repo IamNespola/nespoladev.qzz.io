@@ -154,8 +154,8 @@ const Index = () => {
       {/* FAQ */}
       <section id="faq" className="max-w-3xl mx-auto px-6 py-16">
         <motion.div className="text-center mb-12 space-y-3" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
-          <h2 className="font-mono font-extrabold text-foreground text-3xl md:text-4xl">FAQ</h2>
-          <p className="text-muted-foreground">Got questions? We've got answers.</p>
+          <h2 className="font-mono font-extrabold text-foreground text-3xl md:text-4xl"><span className="text-primary">$</span> man openmyau</h2>
+          <p className="text-muted-foreground font-mono text-sm">Got questions? RTFM — or just read below.</p>
         </motion.div>
         <div className="space-y-4">
           {faqs.map((faq, i) => (
